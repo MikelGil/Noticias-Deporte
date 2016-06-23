@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     public void HacerLlamada(View v){
         if (NoticiasDB.contarNoticias() == 0){
             ProcessJSON consulta = new ProcessJSON();
-            consulta.execure("https://github.com/MikelGil/Noticias-Deporte/master/news.xml");
+            consulta.execure("https://raw.githubusercontent.com/MikelGil/Noticias-Deporte/master/news.xml");
         }
         BaseAdapter adaptador = new AdaptadorCursorNoticias(activity,NoticiasDB.listado());
 
